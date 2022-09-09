@@ -1,82 +1,40 @@
 import './scss/app.scss';
-import logo from './assets/img/Logo.png';
-import nei from './assets/img/nei.png';
+import React from 'react';
+import Skeleton from './components/PlayersBlock/Skeleton';
+import HeaderBlock from './components/HeaderBlock/HeaderBlock';
+import PlayerBlock from './components/PlayersBlock/PlayersBlock';
+
 function App() {
+  const [isLoading, setIsLoading] = React.useState(true);
+  const [players, setPlayers] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch('https://63039ff9761a3bce77db8714.mockapi.io/players')
+      .then(response => response.json())
+      .then(players => {
+        console.log(players);
+        setPlayers(players);
+      })
+      .catch((error) => {
+        console.warn(error);
+        alert('Не получается получить данные')
+      })
+      .finally(() => {
+        setIsLoading(false)
+      });
+  }, []);
+
   return (
     <div className='wrapper'>
-
-      <header className='header'>
-        <div className='container'>
-          <div className='header__content'>
-            <img className='header__content--logo' src={logo} />
-            <ul className='menu'>
-              <li><a href="">все</a></li>
-              <li><a href="">франция</a></li>
-              <li><a href="">англия</a></li>
-              <li><a href="">италия</a></li>
-              <li><a href="">россия</a></li>
-              <li><a href="">германия</a></li>
-            </ul>
-          </div>
-        </div>
-      </header>
+      <HeaderBlock />
       <div className='container'>
         <div className='content'>
           <div className='content__items'>
-            <div className='content__items--item'>
-              <img src={nei} />
-              <p className='player__name'>Neymar da Silva Santos Júnior</p>
-              <div className='player--stats'>
-                <p className='info player__team'>team: Paris Saint-Germain FC <img /></p>
-                <p className='info player__goals'>goals: 7</p>
-                <p className='player__assists'>assists: 6</p>
-              </div>
-            </div>
-            <div className='content__items--item'>
-              <img src={nei} />
-              <p className='player__name'>Neymar da Silva Santos Júnior</p>
-              <div className='player--stats'>
-                <p className='info player__team'>team: Paris Saint-Germain FC <img /></p>
-                <p className='info player__goals'>goals: 7</p>
-                <p className='player__assists'>assists: 6</p>
-              </div>
-            </div>
-            <div className='content__items--item'>
-              <img src={nei} />
-              <p className='player__name'>Neymar da Silva Santos Júnior</p>
-              <div className='player--stats'>
-                <p className='info player__team'>team: Paris Saint-Germain FC <img /></p>
-                <p className='info player__goals'>goals: 7</p>
-                <p className='player__assists'>assists: 6</p>
-              </div>
-            </div>
-            <div className='content__items--item'>
-              <img src={nei} />
-              <p className='player__name'>Neymar da Silva Santos Júnior</p>
-              <div className='player--stats'>
-                <p className='info player__team'>team: Paris Saint-Germain FC <img /></p>
-                <p className='info player__goals'>goals: 7</p>
-                <p className='player__assists'>assists: 6</p>
-              </div>
-            </div>
-            <div className='content__items--item'>
-              <img src={nei} />
-              <p className='player__name'>Neymar da Silva Santos Júnior</p>
-              <div className='player--stats'>
-                <p className='info player__team'>team: Paris Saint-Germain FC <img /></p>
-                <p className='info player__goals'>goals: 7</p>
-                <p className='player__assists'>assists: 6</p>
-              </div>
-            </div>
-            <div className='content__items--item'>
-              <img src={nei} />
-              <p className='player__name'>Neymar da Silva Santos Júnior</p>
-              <div className='player--stats'>
-                <p className='info player__team'>team: Paris Saint-Germain FC <img /></p>
-                <p className='info player__goals'>goals: 7</p>
-                <p className='player__assists'>assists: 6</p>
-              </div>
-            </div>
+            {
+              isLoading ? [...new Array(8)].map((_, index) => (<Skeleton />)) : players.map((obj) => (
+                <PlayerBlock key={obj.id}  {...obj} />
+              ))
+            }
           </div>
         </div>
       </div>
