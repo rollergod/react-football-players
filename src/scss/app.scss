@@ -1,0 +1,83 @@
+@import 'variables';
+@import 'libs/normalize';
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: $background;
+    font-size: 25px;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1180px;
+}
+
+.header {
+    background-color: white;
+    padding: 23px 0 21px 0;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .menu {
+            list-style: none;
+            display: flex;
+            min-width: 675px;
+            justify-content: space-between;
+        }
+    }
+}
+
+.content {
+    margin-top: 114px;
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &--item {
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 114px;
+            background: #FFFFFF;
+            box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+
+            img {
+                // padding-top: 27px;
+                padding: 27px 10px 17px 10px;
+            }
+
+            .player__name {
+                margin: 0 auto;
+                max-width: 240px;
+                font-size: 25px;
+            }
+
+            .player--stats {
+
+                img {
+                    padding: 0;
+                }
+
+                text-align: left;
+                padding: 17px 23px 22px 20px;
+
+                .info {
+                    margin-bottom: 9px;
+                }
+            }
+        }
+    }
+}
