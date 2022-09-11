@@ -1,12 +1,15 @@
 import './scss/app.scss';
-import React from 'react';
+import React, { createContext } from 'react';
 import Skeleton from './components/PlayersBlock/Skeleton';
 import HeaderBlock from './components/HeaderBlock/HeaderBlock';
 import PlayerBlock from './components/PlayersBlock/PlayersBlock';
+import { ThemeContext } from './context/ThemeContext';
+
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
   const [players, setPlayers] = React.useState([]);
+  const { theme } = React.useContext(ThemeContext);
 
   React.useEffect(() => {
     fetch('https://63039ff9761a3bce77db8714.mockapi.io/players')
@@ -25,7 +28,7 @@ function App() {
   }, []);
 
   return (
-    <div className='wrapper'>
+    <div className={`wrapper--${theme}`}>
       <HeaderBlock />
       <div className='container'>
         <div className='content'>
@@ -39,7 +42,6 @@ function App() {
         </div>
       </div>
     </div>
-
   );
 }
 

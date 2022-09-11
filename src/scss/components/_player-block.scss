@@ -1,3 +1,15 @@
+@import '../variables';
+
+.content__items--item {
+    &.light {
+        background-color: $item-light;
+    }
+
+    &.dark {
+        background-color: $item-dark;
+    }
+}
+
 .player__name {
     margin: 0 auto;
     max-width: 240px;

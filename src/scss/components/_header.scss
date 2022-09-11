@@ -1,5 +1,6 @@
+@import '../variables';
+
 .header {
-    background-color: white;
     padding: 23px 0 21px 0;
 
     &__content {
@@ -13,6 +14,18 @@
             display: flex;
             min-width: 675px;
             justify-content: space-between;
+
+            li {
+                a {
+                    &#light {
+                        color: $text-light;
+                    }
+
+                    &#dark {
+                        color: $text-dark;
+                    }
+                }
+            }
         }
     }
 
@@ -20,5 +33,33 @@
         position: absolute;
         right: 100px;
         top: 0;
+    }
+}
+
+.light {
+    background-color: $header-light;
+    color: $text-light;
+
+    div {
+        li {
+            a {
+                color: $text-light;
+                ;
+            }
+        }
+
+    }
+}
+
+.dark {
+    background-color: $header-dark;
+    color: $text-dark;
+
+    div {
+        li {
+            a {
+                color: $text-dark;
+            }
+        }
     }
 }

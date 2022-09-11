@@ -1,9 +1,12 @@
 import React from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 function PlayerBlock({ id, name, image, fcName, crest, assists, goals }) {
-    return (
 
-        <div className='content__items--item'>
+    const { theme } = React.useContext(ThemeContext);
+
+    return (
+        <div className={`content__items--item ${theme}`}>
             <img src={image} />
             <p className='player__name'>{name}</p>
             <div className='player--stats'>

@@ -1,11 +1,15 @@
 import React from "react";
 import logo from '../../assets/img/Logo.png';
 import switchLight from '../../assets/img/TurnOnNightLogo.png';
+import switchDark from '../../assets/img/TurnOnDayLogo.png';
 
+import { ThemeContext } from '../../context/ThemeContext';
 
 function HeaderBlock() {
+    const { theme, setTheme } = React.useContext(ThemeContext);
+
     return (
-        <header className='header'>
+        <header className={`header ${theme}`} >
             <div className='container'>
                 <div className='header__content'>
                     <img className='header__content--logo' src={logo} />
@@ -19,8 +23,10 @@ function HeaderBlock() {
                     </ul>
                 </div>
             </div>
-            <a href="#"><img className='switch' src={switchLight} /></a>
-        </header>
+            <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+                <img className='switch' src={theme === 'light' ? switchLight : switchDark} />
+            </button>
+        </header >
     )
 }
 
