@@ -1,4 +1,5 @@
 import React from "react";
+import styles from './PlayersBlock.module.scss';
 import { ThemeContext } from "../../context/ThemeContext";
 
 function PlayerBlock({ id, name, image, fcName, crest, assists, goals }) {
@@ -6,15 +7,15 @@ function PlayerBlock({ id, name, image, fcName, crest, assists, goals }) {
     const { theme } = React.useContext(ThemeContext);
 
     return (
-        <div className={`content__items--item ${theme}`}>
+        <div className={`${styles["content__items--item"]} ${styles[theme]}`}>
             <img src={image} />
-            <p className='player__name'>{name}</p>
-            <div className='player--stats'>
-                <p className='info player__team'>team: {fcName} <img src={crest} style={{ width: '20px' }} /></p>
-                <p className='info player__goals'>goals: {goals}</p>
-                <p className='player__assists'>assists: {assists ?? '0'}</p>
+            <p className={styles.player__name}>{name}</p>
+            <div className={styles['player--stats']}>
+                <p className={`${styles.info} ${styles.player__team}`}>Team: {fcName} <img src={crest} style={{ width: '20px' }} /></p>
+                <p className={`${styles.info} ${styles.player__goals}`}>Goals: {goals}</p>
+                <p className={`${styles.info} ${styles.player__assists}`}>Assists: {assists ?? '0'}</p>
             </div>
-        </div>
+        </div >
     )
 }
 

@@ -1,4 +1,4 @@
-@import '../variables';
+@import '../../scss/variables';
 
 .content {
     &__items {
@@ -55,5 +55,6 @@
             padding: 0;
             margin-left: 11px;
         }
+
     }
 }

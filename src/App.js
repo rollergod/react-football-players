@@ -3,6 +3,7 @@ import React, { createContext } from 'react';
 import Skeleton from './components/PlayersBlock/Skeleton';
 import HeaderBlock from './components/HeaderBlock/HeaderBlock';
 import PlayerBlock from './components/PlayersBlock/PlayersBlock';
+import styles from './scss/app.module.scss';
 import { ThemeContext } from './context/ThemeContext';
 
 
@@ -28,11 +29,11 @@ function App() {
   }, []);
 
   return (
-    <div className={`wrapper--${theme}`}>
+    <div className={`${styles.wrapper} ${styles[theme]}`}>
       <HeaderBlock />
-      <div className='container'>
-        <div className='content'>
-          <div className='content__items'>
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <div className={styles.content__items}>
             {
               isLoading ? [...new Array(8)].map((_, index) => (<Skeleton />)) : players.map((obj) => (
                 <PlayerBlock key={obj.id}  {...obj} />
