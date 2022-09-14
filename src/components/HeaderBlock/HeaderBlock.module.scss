@@ -16,14 +16,18 @@
             justify-content: space-between;
 
             li {
-                a {
-                    &#light {
-                        color: $text-light;
-                    }
+                cursor: pointer;
 
-                    &#dark {
-                        color: $text-dark;
-                    }
+                &#light {
+                    color: $text-light;
+                }
+
+                &#dark {
+                    color: $text-dark;
+                }
+
+                &.active {
+                    color: red;
                 }
             }
         }
