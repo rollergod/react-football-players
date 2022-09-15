@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-football-players/static/css/main.3ca9f3b5.css",
+    "main.js": "/react-football-players/static/js/main.1add8a7d.js",
+    "static/js/787.59b34200.chunk.js": "/react-football-players/static/js/787.59b34200.chunk.js",
+    "index.html": "/react-football-players/index.html",
+    "main.3ca9f3b5.css.map": "/react-football-players/static/css/main.3ca9f3b5.css.map",
+    "main.1add8a7d.js.map": "/react-football-players/static/js/main.1add8a7d.js.map",
+    "787.59b34200.chunk.js.map": "/react-football-players/static/js/787.59b34200.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ca9f3b5.css",
+    "static/js/main.1add8a7d.js"
+  ]
+}
