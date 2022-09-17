@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/react-football-players/static/css/main.3ca9f3b5.css",
-    "main.js": "/react-football-players/static/js/main.1add8a7d.js",
+    "main.css": "/react-football-players/static/css/main.b97e2fcd.css",
+    "main.js": "/react-football-players/static/js/main.cbfbdc7f.js",
     "static/js/787.59b34200.chunk.js": "/react-football-players/static/js/787.59b34200.chunk.js",
+    "static/media/soccer.png": "/react-football-players/static/media/soccer.d98135b99b26f6ae09e2.png",
+    "static/media/notFoundImage.png": "/react-football-players/static/media/notFoundImage.ba97cefc197c84d0363d.png",
     "index.html": "/react-football-players/index.html",
-    "main.3ca9f3b5.css.map": "/react-football-players/static/css/main.3ca9f3b5.css.map",
-    "main.1add8a7d.js.map": "/react-football-players/static/js/main.1add8a7d.js.map",
+    "main.b97e2fcd.css.map": "/react-football-players/static/css/main.b97e2fcd.css.map",
+    "main.cbfbdc7f.js.map": "/react-football-players/static/js/main.cbfbdc7f.js.map",
     "787.59b34200.chunk.js.map": "/react-football-players/static/js/787.59b34200.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ca9f3b5.css",
-    "static/js/main.1add8a7d.js"
+    "static/css/main.b97e2fcd.css",
+    "static/js/main.cbfbdc7f.js"
   ]
 }
