@@ -1,8 +1,5 @@
 import React from "react";
-
 import logoNotFound from '../../assets/img/notFoundImage.png';
-import soccer from '../../assets/img/soccer.png';
-
 import styles from './NotFoundBlock.module.scss';
 
 const NotFoundBlock = () => {
