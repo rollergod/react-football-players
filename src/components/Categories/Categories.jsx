@@ -15,8 +15,6 @@ const Categories = () => {
 
     const { categoryValue, setCategoryValue } = React.useContext(CategoryContext);
 
-    console.log({ categoryValue });
-
     return (
         <ul className={styles.menu}>
             {
