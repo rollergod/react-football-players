@@ -22,7 +22,6 @@ function App() {
       <div className={styles.container}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="https://rollergod.github.io/react-football-players/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
