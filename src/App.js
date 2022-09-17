@@ -21,8 +21,8 @@ function App() {
       <HeaderBlock />
       <div className={styles.container}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path={process.env.PUBLIC_URL + '/'} element={<Home />} />
+          <Route path={process.env.PUBLIC_URL + '*'} element={<NotFound />} />
         </Routes>
       </div>
     </div>
