@@ -4,6 +4,9 @@ import HeaderBlock from './components/HeaderBlock/HeaderBlock';
 import Home from './pages/Home';
 import styles from './scss/app.module.scss';
 import { ThemeContext } from './context/ThemeContext';
+import { Routes, Route } from 'react-router-dom';
+import NotFound from './pages/NotFound';
+
 
 
 
@@ -17,7 +20,10 @@ function App() {
     <div className={`${styles.wrapper} ${styles[theme]}`}>
       <HeaderBlock />
       <div className={styles.container}>
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </div>
     </div>
 

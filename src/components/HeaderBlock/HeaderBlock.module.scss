@@ -15,8 +15,10 @@
             min-width: 675px;
             justify-content: space-between;
 
+
             li {
                 cursor: pointer;
+                transition: all 0.5s ease;
 
                 &#light {
                     color: $text-light;
@@ -29,6 +31,10 @@
                 &.active {
                     color: red;
                 }
+            }
+
+            li:hover {
+                color: Red;
             }
         }
     }

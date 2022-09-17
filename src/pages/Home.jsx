@@ -2,14 +2,14 @@ import React from "react";
 import PlayerBlock from '../components/PlayersBlock/PlayersBlock';
 import Skeleton from '../components/PlayersBlock/Skeleton';
 import { CategoryContext } from "../context/CategoryContext";
+
 import styles from '../scss/app.module.scss';
-
-
 
 const Home = () => {
     const [isLoading, setIsLoading] = React.useState(true);
     const [players, setPlayers] = React.useState([]);
     const { categoryValue } = React.useContext(CategoryContext);
+
 
     const category = categoryValue === '' ? '' : `category=${categoryValue}`;
     React.useEffect(() => {
