@@ -2,7 +2,7 @@ import React from "react";
 import ReactPaginate from "react-paginate";
 import styles from './Paginate.module.scss';
 
-const Paginate = ({ onChangePage }) => {
+const Paginate = ({ totalItems, playersPerPage, onChangePage }) => {
     return (
         <ReactPaginate
             className={styles.root}
@@ -11,7 +11,7 @@ const Paginate = ({ onChangePage }) => {
             nextLabel=">"
             onPageChange={(event) => onChangePage(event.selected + 1)}
             pageRangeDisplayed={5}
-            pageCount={7}
+            pageCount={totalItems / playersPerPage}
             renderOnZeroPageCount={null}
         />
     )
