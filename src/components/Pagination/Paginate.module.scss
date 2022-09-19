@@ -1,0 +1,35 @@
+.root {
+    display: flex;
+    justify-content: center;
+
+    li {
+        display: inline-flex;
+
+        a {
+            width: 30px;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background-color .25s ease-in-out;
+            margin-right: 10px;
+
+            &:hover {
+                background-color: #FF1493;
+                color: #FFF;
+            }
+
+            margin-bottom: 10px;
+        }
+    }
+
+    :global {
+        .selected {
+            a {
+                background-color: #FF1493;
+                color: #FFF;
+            }
+        }
+    }
+
+}
