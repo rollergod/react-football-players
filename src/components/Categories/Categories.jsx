@@ -1,5 +1,7 @@
 import React from "react";
 import { CategoryContext } from "../../context/CategoryContext";
+import { useSelector, useDispatch } from "react-redux";
+import { setCategoryValue } from '../../redux/slices/filterSlice';
 import styles from '../HeaderBlock/HeaderBlock.module.scss';
 
 const nav = [
@@ -13,15 +15,20 @@ const nav = [
 
 const Categories = () => {
 
-    const { categoryValue, setCategoryValue } = React.useContext(CategoryContext);
+    const dispatch = useDispatch();
+    const category = useSelector((state) => state.filterSlice.categoryValue);
+    const changeCategoryValue = (obj) => {
+        dispatch(setCategoryValue(obj.category));
+    }
+    // const { categoryValue, setCategoryValue } = React.useContext(CategoryContext);
 
     return (
         <ul className={styles.menu}>
             {
                 nav.map((obj, index) => (
                     <li key={index}
-                        className={categoryValue === obj.category ? `${styles.active}` : ''}
-                        onClick={() => setCategoryValue(obj.category)}
+                        className={category === obj.category ? `${styles.active}` : ''}
+                        onClick={() => changeCategoryValue(obj)}
                     >
                         {obj.name}
                     </li>
