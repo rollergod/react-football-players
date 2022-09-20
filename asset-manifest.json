@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react-football-players/static/css/main.c2eda1c8.css",
-    "main.js": "/react-football-players/static/js/main.36a4e8ef.js",
+    "main.js": "/react-football-players/static/js/main.77899f8a.js",
     "static/js/787.59b34200.chunk.js": "/react-football-players/static/js/787.59b34200.chunk.js",
     "static/media/notFoundImage.png": "/react-football-players/static/media/notFoundImage.ba97cefc197c84d0363d.png",
     "index.html": "/react-football-players/index.html",
     "main.c2eda1c8.css.map": "/react-football-players/static/css/main.c2eda1c8.css.map",
-    "main.36a4e8ef.js.map": "/react-football-players/static/js/main.36a4e8ef.js.map",
+    "main.77899f8a.js.map": "/react-football-players/static/js/main.77899f8a.js.map",
     "787.59b34200.chunk.js.map": "/react-football-players/static/js/787.59b34200.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c2eda1c8.css",
-    "static/js/main.36a4e8ef.js"
+    "static/js/main.77899f8a.js"
   ]
 }
