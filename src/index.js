@@ -14,15 +14,15 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <ThemeProvider>
-        <CategoryProvider>
+    <ThemeProvider>
+      <CategoryProvider>
+        <Provider store={store}>
           <BrowserRouter >
             <App />
           </BrowserRouter>
-        </CategoryProvider>
-      </ThemeProvider>
-    </Provider>
+        </Provider>
+      </CategoryProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );
 
