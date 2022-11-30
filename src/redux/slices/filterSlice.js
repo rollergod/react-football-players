@@ -14,7 +14,7 @@ const filterSlice = createSlice({
         },
         setCurrentPage(state, action) {
             state.currentPage = action.payload;
-        }
+        },
     }
 });
 

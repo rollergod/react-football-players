@@ -6,6 +6,7 @@ import axios from 'axios';
 import { CategoryContext } from "../context/CategoryContext";
 import { useDispatch, useSelector } from "react-redux";
 import { setCurrentPage } from "../redux/slices/filterSlice";
+import { nav } from "../components/Categories/Categories";
 
 import styles from '../scss/app.module.scss';
 

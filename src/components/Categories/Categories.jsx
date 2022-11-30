@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setCategoryValue } from '../../redux/slices/filterSlice';
 import styles from '../HeaderBlock/HeaderBlock.module.scss';
 
-const nav = [
+export const nav = [
     { name: 'все', category: '' },
     { name: 'франция', category: 'FL1' },
     { name: 'англия', category: 'EPL' },
